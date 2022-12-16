@@ -1,0 +1,11 @@
+.table-view: focused{
+        -fx-focus-color: FAFAFA;
+}
+
+#add_field_css{
+        -fx-background-radius: 35px;
+}
+
+#add_field_css: focused{
+        -fx-focus-color: FAFAFA;
+}
