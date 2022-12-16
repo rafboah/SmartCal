@@ -1,0 +1,23 @@
+.label:hover{
+     -fx-background-color: D3D3D3;
+}
+
+#settings_css:hover{
+     -fx-background-color: gray;
+}
+
+#input_label_css:hover{
+     -fx-background-color: FAFAFA;
+}
+
+#display_label_css:hover{
+     -fx-background-color: FAFAFA;
+}
+
+#gpa_label_css:hover{
+     -fx-background-color: FAFAFA;
+}
+
+#gpa_value_css:hover{
+     -fx-background-color: FAFAFA;
+}
