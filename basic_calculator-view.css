@@ -1,6 +1,0 @@
-.button{
-      -fx-background-radius: 25px;
-}
-.button: focused{
-      -fx-focus-color: grey;
-}
