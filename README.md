@@ -11,4 +11,6 @@ The css files are in the main branch with the .css file extension.
 
 The icons used in the application are in the main branch with the .png file extension.
 
+Dependencies used can be found in the pom.xml file.
+
 Working to update app with a scientific calculation functionality, dark theme functionality, settings functionality, and help/tutorial functionality.
