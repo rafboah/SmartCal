@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myapps.multical.basic_calculator_controller">
+   <children>
+      <TextArea accessibleRole="TEXT_FIELD" disable="true" layoutX="7.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextArea>
+      <Label id="input_label_css" fx:id="input_label" alignment="CENTER_RIGHT" layoutX="381.0" layoutY="42.0" prefHeight="70.0" prefWidth="400.0" text="0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label id="display_label_css" fx:id="output_label" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="105.0" prefHeight="45.0" prefWidth="500.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="130.0">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="35.0" layoutY="254.0" prefHeight="300.0" prefWidth="530.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="254.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button id="button_clear_css" fx:id="clear_button" mnemonicParsing="false" onMouseClicked="#clear_button_click" prefHeight="35.0" prefWidth="90.0" text="C">
+               <GridPane.margin>
+                  <Insets left="22.0" top="-3.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Button>
+            <Button id="button_square_root_css" fx:id="square_root" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#square_root_click" prefHeight="35.0" prefWidth="90.0" text="√" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="22.0" top="-3.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_seven_css" fx:id="button_seven" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_seven_click" prefHeight="35.0" prefWidth="90.0" text="7" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_one_css" fx:id="button_one" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_one_click" prefHeight="35.0" prefWidth="90.0" text="1" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" top="-3.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_four_css" fx:id="button_four" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_four_click" prefHeight="35.0" prefWidth="90.0" text="4" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_point_css" fx:id="decimal_point" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#decimal_point_click" prefHeight="35.0" prefWidth="90.0" text="." GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_five_css" fx:id="button_five" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_five_click" prefHeight="35.0" prefWidth="90.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" top="-2.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_percent_css" fx:id="button_modulus" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_modulus_click" prefHeight="35.0" prefWidth="90.0" text="\%" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" top="-2.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_nine_css" fx:id="button_nine" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_nine_click" prefHeight="35.0" prefWidth="90.0" text="9" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" top="-3.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_plus/minus_css" fx:id="negative_sign" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#negative_sign_click" prefHeight="35.0" prefWidth="90.0" text="±" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_zero_css" fx:id="button_zero" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_zero_click" prefHeight="35.0" prefWidth="90.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="20.0" top="-2.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_two_css" fx:id="button_two" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_two_click" prefHeight="35.0" prefWidth="90.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" top="-2.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_minus_css" fx:id="button_subtract" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_subtract_click" prefHeight="35.0" prefWidth="90.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="15.0" right="22.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_plus_css" fx:id="button_add" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_add_click" prefHeight="35.0" prefWidth="90.0" text="+" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets left="15.0" right="22.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_backspace_css" fx:id="delete_button" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete_button_click" prefHeight="35.0" prefWidth="90.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" top="-2.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_three_css" fx:id="button_three" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_three_click" prefHeight="35.0" prefWidth="90.0" text="3" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" top="-3.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_eight_css" fx:id="button_eight" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_eight_click" prefHeight="35.0" prefWidth="90.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" top="-2.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_equal_css" fx:id="equals_button" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#equals_button_click" prefHeight="29.0" prefWidth="95.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="15.0" right="22.0" top="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button id="button_divide_css" fx:id="button_divide" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_divide_click" prefHeight="35.0" prefWidth="90.0" text="÷" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="15.0" right="22.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_multiply_css" fx:id="button_multiply" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_multiply_click" prefHeight="35.0" prefWidth="90.0" text="×" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="15.0" right="22.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_six_css" fx:id="button_six" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#button_six_click" prefHeight="35.0" prefWidth="90.0" text="6" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" top="-3.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="25.0" onMouseClicked="#delete_button_click" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../images/basic_calculator-view/backspace_symbol_24px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
